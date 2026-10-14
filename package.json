@@ -1,0 +1,69 @@
+{
+  "name": "dsh-skin-live",
+  "version": "1.0.0",
+  "description": "DSH Web 全局皮肤：PNG/JPG/WebP/GIF 与 MP4/WebM 自定义背景，铺满全局并支持面板不透明度调节",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-ui",
+    "theme",
+    "skin",
+    "background",
+    "wallpaper",
+    "video-background"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaochaorui-study/dsh-skin-live.git"
+  },
+  "homepage": "https://github.com/zhaochaorui-study/dsh-skin-live#readme",
+  "bugs": {
+    "url": "https://github.com/zhaochaorui-study/dsh-skin-live/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node --test client.test.js",
+    "check": "node --check client.js && node --check index.js",
+    "pack": "npm pack",
+    "prepublishOnly": "npm run check && npm test"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ]
+}
