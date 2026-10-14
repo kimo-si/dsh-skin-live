@@ -62,7 +62,10 @@
     "cordis.patch.yml",
     "icon.svg",
     "locale",
+    "screenshots",
     "README.md",
+    "README.en.md",
+    "INSTALL.md",
     "LICENSE",
     "CHANGELOG.md"
   ]

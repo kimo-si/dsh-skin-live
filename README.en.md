@@ -14,6 +14,8 @@ The plugin appends a fixed layer at the very bottom of the page and makes the ap
 - Four independent controls: panel opacity, media opacity, blur, dim
 - Disabling or removing the plugin takes the layer away and restores the theme
 
+<img src="screenshots/layer-model.svg" alt="Layer model" width="720">
+
 ## Table of contents
 
 - [Install](#install)
